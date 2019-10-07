@@ -1,0 +1,33 @@
+<app-user></app-user>
+<div class="container" style="margin-top:5px;width:100%;height:100%;min-height:620px;
+background: -webkit-linear-gradient(top, #e68ba3,#3a6186);
+z-index:-10; background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;">
+
+  <p>主页</p>
+  <button type="button" (click)="form()" class="btn btn-primary">form</button>
+  <!-- 插值表达式 -->
+  <p><img src="{{backjpgUrl}}" height="200" width="200"></p>
+  <!-- 属性绑定 -->
+  <!-- <p><img [src]="backjpgUrl" height="200" width="200" ></p> -->
+  <div class="row">
+    <p *ngIf="color == 'red'" [style.color]="color">hello</p>
+    <button style="margin:10px" type="button" class="btn btn-primary" *ngFor="let btn of buttonList">{{btn}}</button>
+  </div>
+  <div>
+    <h2>ngSwitch</h2>
+    <input name="myVal" [(ngModel)]="myVal" />
+    <hr>
+    <span [ngSwitch]="myVal">
+      <span *ngSwitchCase="'1'">ONE</span>
+      <span *ngSwitchCase="'2'">TWO</span>
+      <span *ngSwitchCase="'3'">THREE</span>
+      <span *ngSwitchCase="'4'">FOUR</span>
+      <span *ngSwitchCase="'5'">FIVE</span>
+      <span *ngSwitchDefault>other</span>
+    </span>
+  </div>
+  <app-form (searchEvent)="search($event)"></app-form>
+  <app-table sectionName="tableName"></app-table>
+</div>

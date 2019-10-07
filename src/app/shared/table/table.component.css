@@ -1,0 +1,20 @@
+thead th,tfoot th {
+  text-align: left;
+  background: grey;
+  color: white
+}
+tbody th {
+  text-align: right;
+  background: lightgrey;
+  color: grey
+}
+/* tbody td {
+  background: greenyellow;
+} */
+#colgroup1 {
+  background-color: blueviolet
+}
+#col3 {
+  background-color: yellow;
+  font-size: small
+}
